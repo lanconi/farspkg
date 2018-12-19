@@ -1,7 +1,7 @@
 Package: farspkg
 Type: Package
 Title: Fatality Analysis Reporting System Functions
-Version: 0.1.0
+Version: 0.2.0
 Author: Lance Dooley
 Maintainer: Lance Dooley <lance@lancedooley.com>
 Description: Provides a set of functions for acquirig and manipulating
@@ -16,3 +16,8 @@ Suggests:
     knitr,
     rmarkdown
 VignetteBuilder: knitr
+Imports: dplyr, 
+         readr, 
+         tidyr, 
+         maps, 
+         graphics
