@@ -1,0 +1,78 @@
+---
+title: "Fatality Analysis Reporting System Functions"
+author: "Lance Dooley"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{FARS Vignette}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+This Vignette describes some functions that allow manipulation of
+data from the US National Highway Traffic Safety Administrations
+Fatality Analysis Reporting System, which is a nationwide census
+providing the American public yearly data regarding fatal injuries
+suffered in motor vehicle traffic crashes.
+
+## Vignette Info
+
+The data used by the Vignette ranges from 2013 to 2017. 
+The functions allow the user to such things as ...
+
+- create propery formatted FARS data file names.
+- Load FARS data files.
+- Show summaries of the FARS data.
+- Create a map of fatalities.
+
+## Functions
+
+The functions provided by this package, with examples are as follows:
+
+********
+
+**Read a FARS data file**
+
+This function will read a raw FARS data file designated by the
+input representing the FARS file name.
+
+fars_read(make_filename("1892"))
+
+********
+
+**Make a correctly formatted FARS file name**
+
+This function will make a correctly formatted FARS file name using the input that represents the year of the FARS data.
+
+make_filename("2015")
+
+********
+
+**Read one or more FARS data files**
+
+This function will read one or more FARS data files designated by the input years which can be a single year or a vector of years.
+
+fars_read_years(c("2013","2015"))
+
+********
+
+**Summarize FARS data by year**
+
+This function will summarize the FARS data for one or more years.
+
+fars_summarize_years(c("2013","2014","2015"))
+
+********
+
+**Create a map of fatalities**
+
+This function will create a map showing a single state and all the fatalies for a given year. Each fatality will show up as a dot on a map.
+
+fars_map_state(12,"2014") 
