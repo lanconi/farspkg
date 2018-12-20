@@ -7,7 +7,7 @@
 fars_read(filename)
 }
 \arguments{
-\item{filename}{A character string representing the name of a FARS file. 
+\item{filename}{A character string representing the name of a FARS file.
 If the FARS data file is not in the working directory, then this argument must also
   include a relative path.}
 }
@@ -20,19 +20,21 @@ This function will read a raw FARS data file designated by the
 input representing the FARS file name.
 }
 \examples{
+\dontrun{
 # Using a correct filename as input ...
 farsdata2015 <- fars_read("accident_2015.csv.bz2")
 
 # Using relative path and correct filename as input ...
 farsdata2015 <- fars_read("mydata/accident_2015.csv.bz2")
 
-# It is also possible to use the make_filename function to create the 
+# It is also possible to use the make_filename function to create the
 # filename, but the data file must be in the working directory in this example.
 farsdata2015 <- fars_read(make_filename("2015"))
 
 # Using an invalid year will result in an error ...
 fars1892 <- fars_read(make_filename("1892"))
-#   Error in fars_read(make_filename("1892")) : 
+#   Error in fars_read(make_filename("1892")) :
 #   file 'accident_1892.csv.bz2' does not exist
+}
 
 }

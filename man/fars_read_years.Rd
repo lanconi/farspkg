@@ -7,7 +7,7 @@
 fars_read_years(years)
 }
 \arguments{
-\item{years}{A character string or vector of character strings representing 
+\item{years}{A character string or vector of character strings representing
 the year(s) of the FARS data. An integer or vector of integers may also
 be used for input; which represent the year(s) of the FARS data.}
 }
@@ -25,6 +25,7 @@ This function will read one or more FARS data files designated by the input
 years which can be a single year or a vector of years.
 }
 \examples{
+ \dontrun{
 # using character strings ...
 farsYearsListA <- fars_read_years("2014")
 farsYearsListB <- fars_read_years(c("2013","2015"))
@@ -37,5 +38,6 @@ farsYearsListB <- fars_read_years(c(2013,2015))
 farsYearsListBad <- fars_read_years("1894")
 #  Warning message:
 #  In value[[3L]](cond) : invalid year: 1894
+}
 
 }

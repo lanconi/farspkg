@@ -19,11 +19,13 @@ This function will make a correctly formatted FARS file name using the
 input that represents the year of the FARS data.
 }
 \examples{
+\dontrun{
 # Using charactger string input ...
 filename2015 <- make_filename("2015")
 #  "accident_2015.csv.bz2"
 
 # Using integer input ...
 filename2017 <- make_filename(2017)
+}
 
 }
